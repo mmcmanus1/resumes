@@ -1,0 +1,172 @@
+\documentclass[10pt,letterpaper]{article}
+
+% Packages for perfect spacing control
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=0.25in, bottom=0.25in, left=0.4in, right=0.4in]{geometry}
+\usepackage[default]{sourcesanspro}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+% Colors
+\definecolor{techblue}{HTML}{1a73e8}
+
+% Perfect spacing control
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\baselineskip}{11pt}
+\pagestyle{empty}
+
+% Exceptional section formatting
+\titleformat{\section}
+  {\color{techblue}\large\bfseries}
+  {}{0em}
+  {}
+  [\vspace{0.5pt}{\color{techblue}\hrule height 0.5pt}\vspace{2pt}]
+
+\titlespacing*{\section}{0pt}{4pt}{0pt}
+
+% Perfect job entries
+\newcommand{\job}[4]{%
+  \noindent\textbf{#1} \hfill \textbf{#2} \\
+  \textit{#3} \hfill \textit{#4}%
+  \vspace{1pt}%
+}
+
+% Exceptional bullet points
+\setlist[itemize]{
+  leftmargin=15pt,
+  labelwidth=10pt,
+  labelsep=5pt,
+  topsep=0.5pt,
+  itemsep=0.8pt,
+  parsep=0pt,
+  partopsep=0pt,
+  before={\vspace{0pt}},
+  after={\vspace{0pt}},
+  label={$\bullet$}
+}
+
+% Clean hyperlinks
+\hypersetup{
+    colorlinks=true,
+    urlcolor=techblue,
+    pdfborder={0 0 0}
+}
+
+\begin{document}
+
+% Perfect header
+\begin{center}
+  {\Large\bfseries Matt McManus}\\[4pt]
+  \footnotesize 610-348-3500 $\cdot$ mattmcmanus41@gmail.com $\cdot$ 
+  \href{https://linkedin.com/in/mattmcm}{linkedin.com/in/mattmcm} $\cdot$ 
+  \href{https://github.com/mmcmanus1}{github.com/mmcmanus1} $\cdot$
+  New York, NY
+\end{center}
+
+\vspace{4pt}
+
+\section{EXPERIENCE}
+\small
+
+\textbf{Bridgewater Associates} \hfill \textbf{New York, NY}\\
+\textit{ML Engineer / Research Scientist - AIA Labs (Sept. 2024 - Present)}
+\begin{itemize}
+  \item Lead development of proprietary AI models for macro-investing using LLMs and reinforcement learning
+  \item Build and scale quantitative research infrastructure for factor discovery and regime detection
+  \item Research LLM-driven macro forecasting and scientific machine learning applications in finance
+  \item Collaborate with senior researchers to deploy ML systems managing \$150B+ AUM
+\end{itemize}
+\vspace{1pt}
+
+\textit{Investment Engineer Intern (Jun. 2023 - Aug. 2023)}
+\begin{itemize}
+  \item Developed quantitative models for systematic investment strategies using machine learning
+  \item Conducted research on alternative data sources and signal generation for portfolio optimization
+\end{itemize}
+\vspace{1pt}
+
+\job{Quantitative Research (Part-time)}{2023 -- 2024}
+{Two Sigma}{New York, NY}
+\begin{itemize}
+  \item Conducted fast-cycle experiments on factor discovery and regime detection for systematic trading
+  \item Developed ML models for alternative data analysis and signal generation
+\end{itemize}
+\vspace{1pt}
+
+\job{Research Assistant}{2022 -- 2024}
+{MIT Julia Lab}{Cambridge, MA}
+\begin{itemize}
+  \item Developed physics-informed neural-ODE framework reducing navigation drift by 60\% in GPS-denied environments
+\end{itemize}
+
+\vspace{1pt}
+
+\job{Quantitative Analyst}{May 2022 -- Aug. 2022}
+{Delphi Digital}{New York, NY}
+\begin{itemize}
+  \item Conducted quantitative analysis of cryptocurrency markets and DeFi protocols using Python and SQL
+  \item Built automated trading strategies and backtesting frameworks for digital asset portfolios
+\end{itemize}
+
+
+\vspace{3pt}
+
+\section{EDUCATION}
+\small
+
+\textbf{Massachusetts Institute of Technology} \hfill \textbf{Cambridge, MA}\\
+\textit{Master of Engineering, Computer Science; GPA: 5.0/5.0} \hfill \textit{Aug. 2023 - Jun. 2024}\\
+\textbf{Thesis:} "Inertial Navigation System Drift Reduction Using Scientific Machine Learning"
+\vspace{4pt}
+
+\textbf{Massachusetts Institute of Technology} \hfill \textbf{Cambridge, MA}\\
+\textit{Bachelor of Science, Mathematics \& Computer Science} \hfill \textit{Sep. 2019 - Feb. 2024}\\
+\textbf{Activities:} Phi Kappa Theta, MIT Pokerbots President, MITHack
+
+\vspace{3pt}
+
+\section{PROJECTS \& RESEARCH}
+\small
+
+\textbf{Physics-Informed Navigation System} \hfill \textbf{2024}\\
+Neural-ODE framework achieving 60\% reduction in navigation drift for GPS-denied environments using PyTorch and JAX
+\vspace{1pt}
+
+\textbf{LLM-Driven Macro Forecasting} \hfill \textbf{2024}\\
+Research on applying large language models to economic forecasting, achieving 25\% improvement in prediction accuracy
+\vspace{1pt}
+
+\textbf{Resy Bot - Restaurant Reservation Automation} \hfill \textbf{2023}\\
+Automated reservation system using Python, Selenium, and AWS Lambda to secure restaurant bookings at scale
+\vspace{1pt}
+
+\textbf{GPT-3 Cybersecurity Evaluation} \hfill \textbf{2023}\\
+Single-authored research evaluating large language model performance in simulated cybersecurity scenarios
+
+\vspace{3pt}
+
+\section{TECHNICAL SKILLS}
+\small
+
+\textbf{Programming:} Python, Julia, C++, SQL, JavaScript, Go, R, Scala, Java \\[2pt]
+\textbf{ML/AI:} PyTorch, TensorFlow, JAX, Transformers, Scientific ML, Reinforcement Learning, LLMs, Hugging Face, XGBoost, MLflow \\[2pt]
+\textbf{Data \& Analytics:} Pandas, NumPy, Scikit-learn, MLflow, A/B Testing, Statistical Modeling \\[2pt]
+\textbf{Infrastructure:} AWS, GCP, Git, Docker, Kubernetes, Linux, CI/CD, Microservices \\[2pt]
+\textbf{Finance:} Quantitative Research, Factor Models, Backtesting, Regime Detection, Risk Management
+
+\vspace{3pt}
+
+\section{LEADERSHIP \& ACHIEVEMENTS}
+\small
+
+\textbf{Leadership:} MIT Pokerbots President (2023-2024), organized competition for 250+ students with industry partnerships \\[2pt]
+\textbf{Athletics:} MIT Varsity Squash Team member, competed in NESCAC and national tournaments \\[2pt]
+\textbf{Publications:} Evaluating GPT-3 Performance in Cybersecurity Scenarios - Computers \& Security Journal \\[2pt]
+\textbf{Honors:} MIT Pokerbots Competition 1st Place, HackMIT Award Winner, Phi Kappa Theta member
+
+\end{document}
