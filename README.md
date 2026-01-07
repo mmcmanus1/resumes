@@ -1,66 +1,35 @@
-# Resume Collection
+# Resume
 
-This repository contains LaTeX source files and compiled PDFs for various resume versions, organized by focus area.
+LaTeX resume source file with PDF conversion script.
 
-## Directory Structure
+## Files
 
-```
-resumes/
-├── finance/          # Finance-focused resume
-├── tech/             # Technology-focused resume
-├── research/         # Research-focused resume
-└── general/          # General-purpose resume variants
-```
+- `matt_mcmanus_pristine_v2_1page.tex` - Clean, versatile resume format
+- `convert_resume.py` - Python script to compile LaTeX to PDF
 
-## Resume Versions
+## Compiling to PDF
 
-### Finance
-- **matt_mcmanus_finance_perfect_v2_1page** - Optimized for finance and quantitative trading roles
-
-### Tech
-- **matt_mcmanus_tech_perfect_v2_1page** - Tailored for software engineering and technical positions
-
-### Research
-- **matt_mcmanus_research_perfect_v2_1page** - Emphasizes research experience and academic achievements
-
-### General
-- **matt_mcmanus_pristine_v2_1page** - Clean, versatile format suitable for various industries
-- **matt_mcmanus_ultra_clean_v2_1page** - Minimalist design with optimal whitespace
-- **matt_mcmanus_exceptional_spacing_v2_1page** - Carefully balanced spacing for readability
-
-## Compiling LaTeX Files
-
-To compile a `.tex` file into a PDF:
+### Using the Python Script (Recommended)
 
 ```bash
-pdflatex filename.tex
+# Convert the resume
+python convert_resume.py
+
+# Clean up auxiliary files after conversion
+python convert_resume.py --clean
 ```
 
-For best results, you may need to run pdflatex twice to properly resolve references:
+The script automatically runs pdflatex twice for proper reference resolution.
+
+### Manual Compilation
 
 ```bash
-pdflatex filename.tex
-pdflatex filename.tex
+pdflatex matt_mcmanus_pristine_v2_1page.tex
+pdflatex matt_mcmanus_pristine_v2_1page.tex
 ```
 
 ## Requirements
 
+- Python 3.7+ (for the conversion script)
 - pdflatex (part of TeX Live or MiKTeX)
-- Required LaTeX packages (typically included in standard distributions):
-  - geometry
-  - enumitem
-  - hyperref
-  - titlesec
-  - fontenc
-  - inputenc
-
-## Usage
-
-1. Choose the appropriate resume version for your target role
-2. Edit the `.tex` file to update content as needed
-3. Compile using pdflatex
-4. Use the generated PDF for applications
-
-## Version Information
-
-All resumes are version 2, single-page format (`v2_1page`), optimized for ATS (Applicant Tracking Systems) and professional presentation.
+- Required LaTeX packages: geometry, enumitem, hyperref, titlesec, fontenc, inputenc
